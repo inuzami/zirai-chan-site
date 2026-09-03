@@ -10,7 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="header-theme.css">
+  <link rel="stylesheet" href="interactions.css">
   <script src="intro-gallery.js" defer></script>
+  <script src="interactions.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -45,13 +47,13 @@
 
     <section class="section section--intro" id="introduction" aria-labelledby="intro-title">
       <div class="section__inner intro-layout">
-        <p class="section__eyebrow section__eyebrow--intro">INTRODUCTION</p>
+        <p class="section__eyebrow section__eyebrow--intro" data-reveal>INTRODUCTION</p>
         <h2 id="intro-title" class="intro-catch">
-          <span class="intro-catch__line">カワイイ女の子が</span>
-          <span class="intro-catch__line">人の心から「病み」を<span class="intro-catch__phrase">回収する</span></span>
-          <span class="intro-catch__line intro-catch__line--accent"><span class="intro-catch__phrase">ワイヤーアクション</span><wbr><span class="intro-catch__phrase">＆アドベンチャー</span></span>
+          <span class="intro-catch__line" data-reveal data-reveal-delay="70">カワイイ女の子が</span>
+          <span class="intro-catch__line" data-reveal data-reveal-delay="140">人の心から「病み」を<span class="intro-catch__phrase">回収する</span></span>
+          <span class="intro-catch__line intro-catch__line--accent" data-reveal data-reveal-delay="210"><span class="intro-catch__phrase">ワイヤーアクション</span><wbr><span class="intro-catch__phrase">＆アドベンチャー</span></span>
         </h2>
-        <p class="intro-copy">
+        <p class="intro-copy" data-reveal data-reveal-delay="280">
           目を覚ますと、そこは誰かの「心」の中だった。<br>
           自分がなぜここにいるのかも分からない少女<span class="text-nowrap">「ユメミ」</span>。<br>
           元の世界へ帰るため、彼女は人々の深層心理へ潜り、<br>
@@ -59,7 +61,7 @@
         </p>
       </div>
 
-      <div class="intro-gallery section__inner" role="region" aria-label="作品イメージ">
+      <div class="intro-gallery section__inner" role="region" aria-label="作品イメージ" data-reveal data-reveal-delay="120">
         <div class="intro-gallery__grid">
           <a class="intro-gallery__shot intro-gallery__shot--main" href="assets/images/screenshots/title-1600.webp" data-caption="タイトル画面" aria-label="タイトル画面を拡大表示">
             <img src="assets/images/screenshots/title-960.webp"
@@ -104,27 +106,27 @@
 
     <section class="section section--game" id="game" aria-labelledby="game-title">
       <div class="section__inner">
-        <p class="section__eyebrow section__eyebrow--game">GAME</p>
-        <h2 id="game-title" class="section__title game-title">チョーカーで心の奥へと突き進め！</h2>
-        <p class="section__lead game-lead">
+        <p class="section__eyebrow section__eyebrow--game" data-reveal>GAME</p>
+        <h2 id="game-title" class="section__title game-title" data-reveal data-reveal-delay="80">チョーカーで心の奥へと突き進め！</h2>
+        <p class="section__lead game-lead" data-reveal data-reveal-delay="160">
           ユメミを操作して、人の精神世界へダイブ。<br>
           不思議なチョーカーを使ったワイヤーアクションで、病み菌の回収を目指そう。
         </p>
 
         <div class="feature-list">
           <article class="feature">
-            <div class="feature__media">
+            <div class="feature__media" data-reveal="left">
               <img src="assets/images/screenshots/choker-swing-960.webp"
                 srcset="assets/images/screenshots/choker-swing-960.webp 960w, assets/images/screenshots/choker-swing-1600.webp 1600w"
                 sizes="(max-width: 620px) calc(100vw - 2rem), (max-width: 900px) calc(100vw - 3rem), 630px"
                 width="1600" height="897" loading="lazy" decoding="async" alt="足場にチョーカーを引っかけて空中をスイングするユメミ">
             </div>
             <div class="feature__body">
-              <div class="feature__heading">
+              <div class="feature__heading" data-reveal="right" data-reveal-delay="100">
                 <p class="feature__number">Game 01</p>
                 <h3><span class="feature-title__phrase">チョーカーを使って</span><wbr><span class="feature-title__phrase">ワイヤーアクション</span></h3>
               </div>
-              <div class="feature__copy">
+              <div class="feature__copy" data-reveal="right" data-reveal-delay="180">
                 <p>
                   ユメミのなが～い不思議なチョーカーを操り、人の精神世界を駆け抜けろ！
                 </p>
@@ -136,18 +138,18 @@
           </article>
 
           <article class="feature">
-            <div class="feature__media">
+            <div class="feature__media" data-reveal="left">
               <img src="assets/images/screenshots/stage-encounter-960.webp"
                 srcset="assets/images/screenshots/stage-encounter-960.webp 960w, assets/images/screenshots/stage-encounter-1600.webp 1600w"
                 sizes="(max-width: 620px) calc(100vw - 2rem), (max-width: 900px) calc(100vw - 3rem), 630px"
                 width="1600" height="900" loading="lazy" decoding="async" alt="ハートとドクロ模様のステージで敵と向き合うユメミ">
             </div>
             <div class="feature__body">
-              <div class="feature__heading">
+              <div class="feature__heading" data-reveal="right" data-reveal-delay="100">
                 <p class="feature__number">Game 02</p>
                 <h3><span class="feature-title__phrase">カワイイ×ヤミの</span><wbr><span class="feature-title__phrase">精神世界を進め！</span></h3>
               </div>
-              <div class="feature__copy">
+              <div class="feature__copy" data-reveal="right" data-reveal-delay="180">
                 <p>
                   メルヘンチックだけど、どこか不気味な精神世界――。襲いかかる敵や仕掛けをかいくぐり、世界の奥を目指そう。
                 </p>
@@ -159,18 +161,18 @@
           </article>
 
           <article class="feature">
-            <div class="feature__media">
+            <div class="feature__media" data-reveal="left">
               <img src="assets/images/screenshots/boss-battle-960.webp"
                 srcset="assets/images/screenshots/boss-battle-960.webp 960w, assets/images/screenshots/boss-battle-1600.webp 1600w"
                 sizes="(max-width: 620px) calc(100vw - 2rem), (max-width: 900px) calc(100vw - 3rem), 630px"
                 width="1600" height="897" loading="lazy" decoding="async" alt="大きなハンマーを構える巨大なボスに立ち向かうユメミ">
             </div>
             <div class="feature__body">
-              <div class="feature__heading">
+              <div class="feature__heading" data-reveal="right" data-reveal-delay="100">
                 <p class="feature__number">Game 03</p>
                 <h3><span class="feature-title__phrase">最深部での</span><wbr><span class="feature-title__phrase">ボスとの対決</span></h3>
               </div>
-              <div class="feature__copy">
+              <div class="feature__copy" data-reveal="right" data-reveal-delay="180">
                 <p>
                   精神世界の最深部では、強力なボスとの戦いが待っている。激しい戦闘に打ち勝ち、精神世界から病み菌を回収しよう。
                 </p>
@@ -183,16 +185,16 @@
 
     <section class="section section--character" id="character" aria-labelledby="character-title">
       <div class="character-heading section__inner">
-        <h2 id="character-title" class="character-heading__title">CHARACTER</h2>
+        <h2 id="character-title" class="character-heading__title" data-reveal>CHARACTER</h2>
       </div>
 
       <div class="character-split">
         <article class="character character--yumemi">
-          <div class="character__visual character__visual--yumemi">
+          <div class="character__visual character__visual--yumemi" data-reveal="left">
             <div class="character__visual-bg"></div>
             <img src="assets/images/characters/yumemi-normal-bustupphoto.png" alt="ユメミ">
           </div>
-          <div class="character__body">
+          <div class="character__body" data-reveal data-reveal-delay="100">
             <p class="character__roman">YUMEMI</p>
             <h3>ユメミ</h3>
             <p>
@@ -205,7 +207,7 @@
         </article>
 
         <article class="character character--risuka">
-          <div class="character__body">
+          <div class="character__body" data-reveal data-reveal-delay="100">
             <p class="character__roman">RISUKA-CHAN</p>
             <h3>リスカちゃん</h3>
             <p>
@@ -213,7 +215,7 @@
             </p>
             <p>どうしてそんなことを知っているのかは……？</p>
           </div>
-          <div class="character__visual character__visual--risuka">
+          <div class="character__visual character__visual--risuka" data-reveal="right">
             <div class="character__visual-bg"></div>
             <img src="assets/images/characters/risuka-chan-yatta.png" alt="リスカちゃん">
           </div>
@@ -223,12 +225,12 @@
 
     <section class="section section--product" id="product" aria-labelledby="product-title">
       <div class="section__inner">
-        <p class="section__eyebrow">PRODUCT</p>
+        <p class="section__eyebrow" data-reveal>PRODUCT</p>
         <div class="product-card">
-          <div class="product-card__visual">
+          <div class="product-card__visual" data-reveal="left">
             <img src="assets/images/TitleWithLogo.png" alt="病み菌少女地雷ちゃん">
           </div>
-          <div class="product-card__body">
+          <div class="product-card__body" data-reveal="right" data-reveal-delay="100">
             <h2 id="product-title">
               <span class="product-title__line">病み菌少女</span>
               <span class="product-title__line">地雷ちゃん</span>
