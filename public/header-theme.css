@@ -1,0 +1,440 @@
+.site-header {
+  background: linear-gradient(100deg, rgba(111, 0, 255, 0.96), rgba(153, 24, 255, 0.94) 56%, rgba(200, 35, 255, 0.92));
+  border-bottom: 1px solid rgba(255, 142, 220, 0.78);
+  box-shadow: 0 10px 34px rgba(88, 0, 160, 0.34), 0 0 28px rgba(204, 54, 255, 0.18);
+  backdrop-filter: blur(14px) saturate(1.2);
+}
+
+.site-nav {
+  color: #fff;
+  text-shadow: 0 1px 10px rgba(45, 0, 75, 0.42);
+}
+
+.site-nav a::after {
+  background: linear-gradient(90deg, #ff63ad, #ffd1e9);
+  box-shadow: 0 0 10px rgba(255, 99, 173, 0.68);
+}
+
+/* Footer: use the same vivid purple family as the fixed header. */
+.site-footer {
+  padding: 1.35rem clamp(1.25rem, 4vw, 4rem);
+  background: linear-gradient(100deg, rgba(111, 0, 255, 0.98), rgba(153, 24, 255, 0.96) 56%, rgba(200, 35, 255, 0.94));
+  border-top: 1px solid rgba(255, 142, 220, 0.78);
+  box-shadow: 0 -10px 34px rgba(88, 0, 160, 0.3), 0 0 28px rgba(204, 54, 255, 0.16);
+}
+
+.site-footer__inner {
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 1rem 2rem;
+}
+
+.site-footer__logo {
+  width: min(190px, 32vw);
+  max-height: 52px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.site-footer__links {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.site-footer__copyright {
+  grid-column: auto;
+  justify-self: end;
+  white-space: nowrap;
+}
+
+.site-footer__links,
+.site-footer__copyright {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 10px rgba(45, 0, 75, 0.34);
+}
+
+/* Placeholder media: clearly signal unfinished screenshots without using artwork. */
+.media-placeholder {
+  background:
+    linear-gradient(135deg, rgba(255, 79, 154, 0.08), rgba(155, 93, 229, 0.12)),
+    #17101d;
+  border-color: rgba(255, 180, 210, 0.24);
+}
+
+.intro-shot.media-placeholder {
+  display: grid;
+  place-items: center;
+}
+
+.intro-shot .media-placeholder__message {
+  position: static;
+  margin: 0;
+  color: rgba(255, 231, 242, 0.72);
+  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+.feature__media.media-placeholder > p {
+  position: static;
+  display: grid;
+  place-content: center;
+  min-height: inherit;
+  padding: 2rem;
+  color: rgba(255, 231, 242, 0.8);
+  font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+  line-height: 1.7;
+  letter-spacing: 0.08em;
+}
+
+.feature__media.media-placeholder span {
+  color: rgba(216, 199, 211, 0.68);
+  font-size: clamp(0.72rem, 0.9vw, 0.9rem);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* GAME: keep each heading phrase intact while allowing phrase-level wrapping. */
+.feature-title__phrase {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (min-width: 901px) {
+  .feature {
+    grid-template-columns: minmax(0, 630px) minmax(420px, 1fr);
+    gap: clamp(2.5rem, 4vw, 4rem);
+  }
+}
+
+/* Keep the top edge of the hero artwork visible below the fixed header. */
+.hero__visual,
+.hero__shade {
+  top: 76px;
+  bottom: 0;
+  height: auto;
+}
+
+.hero__visual img {
+  object-position: center top;
+}
+
+/* HERO fine tuning */
+.hero__content {
+  grid-template-columns: minmax(0, 760px) minmax(360px, 480px);
+  gap: 0 clamp(2.5rem, 6vw, 7rem);
+}
+
+.hero__logo-wrap {
+  transform: translateY(1.35rem);
+}
+
+.hero__logo {
+  width: min(760px, 60vw);
+}
+
+.hero__status {
+  margin-bottom: -0.08rem;
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  line-height: 1.14;
+  letter-spacing: 0.07em;
+  text-align: right;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.82), 0 0 20px rgba(255, 115, 204, 0.14);
+}
+
+.hero__content > .button {
+  justify-self: end;
+  width: auto;
+}
+
+.hero__content > .button--steam {
+  min-width: 330px;
+  min-height: 78px;
+  padding-inline: 1.35rem;
+  font-size: clamp(1.12rem, 1.9vw, 1.35rem);
+  transform: translateY(-0.3rem);
+}
+
+/* PRODUCT: keep the intended two-line title grouping at every viewport width. */
+.product-title__line {
+  display: block;
+  white-space: nowrap;
+}
+
+/* CHARACTER: Figma uses top-positioned copy rather than vertically centered copy. */
+.character__body {
+  align-self: stretch;
+}
+
+@media (min-width: 1201px) {
+  .character-split {
+    grid-template-columns: 52.6041667% 47.3958333%;
+  }
+
+  .character--yumemi {
+    grid-template-columns: 47.7227723% 52.2772277%;
+  }
+
+  .character--risuka {
+    grid-template-columns: 55.6043956% 44.3956044%;
+  }
+
+  .character--yumemi .character__body {
+    padding: clamp(2.1rem, 2.74vw, 3.2875rem) clamp(1.6rem, 2vw, 2.5rem) 1.5rem clamp(0.9rem, 1.2vw, 1.4375rem);
+  }
+
+  .character--risuka .character__body {
+    padding: clamp(2.05rem, 2.64vw, 3.1625rem) clamp(1.4rem, 1.6vw, 1.875rem) 1.5rem clamp(1.8rem, 2.4vw, 2.875rem);
+  }
+
+  .character--yumemi .character__roman {
+    font-size: clamp(1.35rem, 1.667vw, 2rem);
+  }
+
+  .character--risuka .character__roman {
+    font-size: clamp(1.5rem, 1.875vw, 2.25rem);
+  }
+
+  .character--yumemi .character__body h3 {
+    font-size: clamp(3.5rem, 4.271vw, 5.125rem);
+    line-height: 1.146;
+  }
+
+  .character--risuka .character__body h3 {
+    font-size: clamp(3rem, 3.646vw, 4.375rem);
+    line-height: 1.2;
+  }
+
+  .character__body > p:not(.character__roman) {
+    font-size: clamp(1.05rem, 1.25vw, 1.5rem);
+    line-height: 1.4167;
+  }
+
+  .character__body > p:not(.character__roman):first-of-type {
+    margin-top: clamp(0.85rem, 0.9vw, 1.0625rem);
+  }
+
+  .character--yumemi .character__visual img {
+    width: 234.6%;
+    height: auto;
+    left: -70%;
+    top: 0.9%;
+  }
+
+  .character--risuka .character__visual {
+    width: calc(100% + 12px);
+  }
+
+  .character--risuka .character__visual img {
+    width: 130.4%;
+    height: auto;
+    left: -6.5%;
+    top: -8.2%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero__visual,
+  .hero__shade {
+    top: 96px;
+  }
+
+  .hero__content {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+    gap: 0 2rem;
+  }
+
+  .hero__logo {
+    width: min(640px, 64vw);
+  }
+
+  .hero__status {
+    font-size: clamp(1.45rem, 3.2vw, 2rem);
+  }
+
+  .hero__content > .button--steam {
+    min-width: 300px;
+    min-height: 70px;
+    padding-inline: 1.15rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .feature__media.media-placeholder > p {
+    position: absolute;
+    inset: 0;
+    min-height: 0;
+    padding: 1rem;
+  }
+
+  .site-footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .site-footer__logo {
+    width: min(170px, 48vw);
+    max-height: 48px;
+  }
+
+  .site-footer__links {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    white-space: normal;
+  }
+
+  .site-footer__copyright {
+    grid-column: 1;
+    justify-self: start;
+    white-space: normal;
+  }
+
+  .hero__visual,
+  .hero__shade {
+    top: 94px;
+  }
+
+  .hero__content {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .hero__logo-wrap {
+    transform: translateY(0.55rem);
+  }
+
+  .hero__logo {
+    width: min(540px, 92vw);
+  }
+
+  .hero__status {
+    justify-self: end;
+    width: auto;
+    margin-top: 0.45rem;
+    margin-bottom: -0.05rem;
+    font-size: 1.45rem;
+    line-height: 1.18;
+    text-align: right;
+  }
+
+  .hero__content > .button {
+    justify-self: end;
+    width: auto;
+  }
+
+  .hero__content > .button--steam {
+    min-width: 280px;
+    min-height: 64px;
+    padding-inline: 1rem;
+    font-size: 1rem;
+    transform: translateY(-0.2rem);
+  }
+}
+
+/* Mobile hero: prioritize the artwork and keep the title/status/CTA as one compact block. */
+@media (max-width: 620px) {
+  :root {
+    --header-height: 78px;
+  }
+
+  .site-header {
+    height: var(--header-height);
+    min-height: var(--header-height);
+    align-items: center;
+    align-content: center;
+    gap: 0.1rem 0.75rem;
+    padding: 0.35rem 1rem;
+  }
+
+  .site-header__brand {
+    width: 112px;
+  }
+
+  .site-header__brand img {
+    height: 27px;
+  }
+
+  .site-nav {
+    justify-content: space-between;
+    gap: 0.55rem;
+    padding-bottom: 0;
+    font-size: 0.62rem;
+    line-height: 1;
+    letter-spacing: 0.11em;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav a {
+    padding: 0.24rem 0;
+  }
+
+  .hero {
+    min-height: clamp(610px, 82svh, 670px);
+  }
+
+  .hero__visual,
+  .hero__shade {
+    top: var(--header-height);
+  }
+
+  .hero__visual img {
+    object-position: 28% top;
+  }
+
+  .hero__shade {
+    background:
+      linear-gradient(to bottom, rgba(8, 5, 12, 0.02) 0%, rgba(8, 5, 12, 0.04) 44%, rgba(8, 5, 12, 0.28) 62%, rgba(8, 5, 12, 0.72) 82%, rgba(8, 5, 12, 0.94) 100%),
+      linear-gradient(to right, rgba(8, 5, 12, 0.12), transparent 58%, rgba(19, 7, 26, 0.08));
+  }
+
+  .hero__content {
+    left: 0.9rem;
+    right: 0.9rem;
+    bottom: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    gap: 0.3rem;
+  }
+
+  .hero__logo-wrap {
+    justify-self: center;
+    transform: none;
+  }
+
+  .hero__logo {
+    width: min(340px, 86vw);
+  }
+
+  .hero__status {
+    justify-self: center;
+    width: 100%;
+    margin: 0.25rem 0 0;
+    font-size: clamp(1.2rem, 5.6vw, 1.45rem);
+    line-height: 1.18;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .hero__content > .button {
+    justify-self: center;
+    width: min(320px, calc(100vw - 2rem));
+  }
+
+  .hero__content > .button--steam {
+    min-width: 0;
+    min-height: 58px;
+    padding-inline: 1rem;
+    font-size: 0.95rem;
+    transform: none;
+  }
+}
